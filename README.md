@@ -10,9 +10,13 @@
 🛠️ Tecnologias
 
 ⚛️ React
+
 📄 JSX
+
 🎨 CSS
+
 📬 EmailJS
+
 🌐 Vercel (deploy)
 
 ✨ Recursos implementados
