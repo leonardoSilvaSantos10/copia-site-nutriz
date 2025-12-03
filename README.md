@@ -52,5 +52,6 @@ Deploy e arquitetura moderna de front-end
 ✔️ Projeto funcional e finalizado como cópia visual e estrutural do site original.
 
 🔗 Referência
+
 Site original: https://nutriz.com.br/  
 Este projeto foi desenvolvido apenas para fins de estudo.
