@@ -121,7 +121,7 @@ const Header = () => {
 
         <div className="grupo-icones">
           <a
-            href="https://www.instagram.com/seu_perfil"
+            href="https://www.instagram.com/nutrizalimentos/"
             target="_blank"
             rel="noreferrer"
           >
@@ -133,7 +133,7 @@ const Header = () => {
           </a>
 
           <a
-            href="https://www.instagram.com/seu_perfil"
+            href="https://www.facebook.com/nutrizalimentos"
             target="_blank"
             rel="noreferrer"
           >
@@ -145,7 +145,7 @@ const Header = () => {
           </a>
 
           <a
-            href="https://www.instagram.com/seu_perfil"
+            href="https://www.linkedin.com/company/nutriz-industria-ltda/"
             target="_blank"
             rel="noreferrer"
           >
@@ -239,7 +239,7 @@ const Header = () => {
             <div className="controle-duas-div-icones">
               <div className="menu-mobile-icones">
                 <a
-                  href="https://www.instagram.com/seu_perfil"
+                  href="https://www.instagram.com/nutrizalimentos/"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -250,7 +250,7 @@ const Header = () => {
                   />
                 </a>
                 <a
-                  href="https://www.facebook.com/seu_perfil"
+                  href="https://www.facebook.com/nutrizalimentos"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -261,7 +261,7 @@ const Header = () => {
                   />
                 </a>
                 <a
-                  href="https://www.linkedin.com/seu_perfil"
+                  href="https://www.linkedin.com/company/nutriz-industria-ltda/"
                   target="_blank"
                   rel="noreferrer"
                 >
