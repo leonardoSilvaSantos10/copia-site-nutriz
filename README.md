@@ -2,12 +2,15 @@
 
 🧩 Projeto desenvolvido como exercício de front-end, recriando o site da Nutriz do zero utilizando React.
 
+
 📘 Sobre
 
 🎨 Interface construída com componentes React e estilização própria, replicando o visual e as seções principais do site original.
 🏗️ Foco em componentização, organização de código e responsividade em ambiente real.
 
+
 🛠️ Tecnologias
+
 
 ⚛️ React
 
@@ -19,6 +22,7 @@
 
 🌐 Vercel (deploy)
 
+
 ✨ Recursos implementados
 
 📌 Layout completo recriado
@@ -28,6 +32,7 @@
 📌 Formulário funcional com EmailJS
 📌 Envio de e-mail direto pelo site (sem backend)
 
+
 💬 Funcionalidade do formulário
 
 📬 Integração via EmailJS para envio de mensagens
@@ -35,9 +40,11 @@
 📢 Feedback ao usuário
 ☁️ Sem necessidade de servidor próprio
 
+
 ▶️ Como rodar
 npm install
 npm run dev
+
 
 🎯 Objetivo do projeto
 
@@ -50,6 +57,7 @@ HTML/CSS responsivo
 Integração com serviço externo (EmailJS)
 
 Deploy e arquitetura moderna de front-end
+
 
 📌 Status
 
