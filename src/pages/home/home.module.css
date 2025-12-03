@@ -1,0 +1,1172 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+body {
+  width: 100%;
+  font-family: Ubuntu, sans-serif;
+}
+
+.primeiro-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;          /* altura total da tela */
+  overflow: hidden;
+  display: flex;
+  justify-content: center; /* centraliza horizontalmente */
+  align-items: center;     /* centraliza verticalmente */
+  flex-direction: column;  /* para o botão ficar abaixo do texto */
+}
+
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;              /* atrás do texto */
+}
+
+.home-text {
+  position: relative;
+  z-index: 2;              /* acima do vídeo */
+  text-align: center;
+  width: 60rem;
+  color: var(--cor-fonte-branca);
+  margin: 0 auto; /* isso centraliza o container */
+}
+
+.home-text h1 {
+  font-size: 3.5em;
+  font-weight: 500;
+}
+
+.home-text p {
+  width: 30rem;
+  margin: 0 auto;
+  font-size: 1.3rem;
+  margin-top: 10px;
+  font-weight: 200;
+}
+
+/*essa parte do css é só para estilizar o efeito em volta da palvra frescor*/
+.pill {
+  position: relative;       /* para que o SVG absoluto se alinhe à palavra */
+  display: inline-block;    
+  padding: 20px 30px;      /* aumenta espaço horizontal e vertical */
+}
+
+.scribble-svg {
+  position: absolute;
+  top: 0;
+  left: 5px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.scribble-svg path {
+  stroke-dasharray: 5000;     /* comprimento total do path (aprox.) */
+  stroke-dashoffset: 5000;    /* começa invisível */
+  animation: draw 4s cubic-bezier(0.5, 0, 0, 0.2) forwards; /* animação*/
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;      /* linha desenhada */
+ }
+}
+
+.botao-conheca {
+  position: relative;
+  z-index: 2;
+  margin-top: 20px;       /* espaço entre texto e botão */
+  background-color: var(--vermelho);
+  border-radius: 6px;
+  color: #fff;
+  border: none;
+  padding: 20px 50px;
+  font-size: 1em;
+  text-decoration: none;
+  font-weight: 650;
+}
+
+.botao-conheca:hover {
+  background-color: var(--cor-topico-vermelho);
+}
+
+/* SEGUNDA PARTE TELA HOME */
+
+.pai-segundo-terceiro-container {
+  width: 80vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15vh;
+}
+
+
+.segundo-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+} 
+
+.terceiro-container {
+  width: 50%;
+}
+
+.titulo-container {
+  max-width: 6.8em;
+  font-size: 6vh;
+  font-weight: 400; 
+  color: var(--verde);
+  padding-bottom: 10px;
+} 
+
+.texto-container {
+  width: 70%;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--cinza);
+}
+
+.imagem-brocolis {
+  max-width: 37vw;
+  border-radius: 15px;
+}
+
+.botao-saiba-mais {
+  background-color: var(--vermelho);
+  padding: 25px 45px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  width: 100px;
+  text-align: center;
+}
+
+.botao-saiba-mais:hover {
+  background-color: var(--cor-linha-header);
+}
+
+/* TERCEIRA PARTE TELA HOME */
+
+.quarto-container {
+  width: 65%;
+  margin: 0 auto; /* isso centraliza o container */
+  padding-top: 2em;
+}
+
+.texto-quarto-container {
+  color: var(--verde);
+  font-size: 40px;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* QUARTA PARTE DA TELA HOME */
+
+.container-pai{
+  display: flex;
+  width: 85%;
+  margin: 0 auto;
+  justify-content: space-around;
+  gap: 3vh;
+  padding-top: 10vh;
+  padding-bottom: 15vh;
+}
+
+.bloco-branco, .bloco-verde, .bloco-vermelho{
+  width: 25%;
+  padding: 45px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.bloco-branco h3, .bloco-verde h3, .bloco-vermelho h3 {
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+.bloco-branco p, .bloco-verde p, .bloco-vermelho p {
+  font-size: 1em;
+  font-weight: 200;
+}
+
+.bloco-branco{
+  background-color: var(--cor-fonte-branca);
+  color: var(--verde);
+}
+
+.bloco-verde {
+  background-color: var(--verde);
+  color: var(--cor-fonte-branca);
+}
+
+.bloco-vermelho {
+  background-color: var(--cor-topico-vermelho);
+  color: var(--cor-fonte-branca);
+}
+
+/* QUINTA PARTE DA TELA HOME */
+
+.pai-imagem {
+  position: relative; /* cria o contexto pro z-index funcionar */
+  width: 100%;
+  height: 60vh;
+  overflow: hidden; /*aqui esconde a parte que ultrapassar a altura */
+}
+
+.img-legumes{
+  width: 100%;
+  object-fit: cover;
+  z-index: 1;              /* atrás do texto */
+  position: absolute;
+}
+
+.texto-legumes {
+  position: absolute; /* posiciona sobre a imagem */
+  top: 50%;           /* metade da altura do pai */
+  left: 50%;          /* metade da largura do pai */
+  transform: translate(-50%, -50%); /* centraliza perfeitamente */
+  z-index: 2;
+  text-align: center;
+  color: var(--cor-fonte-branca);
+  font-size: 6vh;
+  font-weight: 400;
+}
+
+/* LINHA VERMELHA */
+
+.destaque-vermelho {
+  position: relative;       /* para o SVG ficar posicionado em relação à palavra */
+  display: inline-block;    /* só ocupa o espaço da palavra */
+  z-index: 0;
+}
+
+.linha-vermelha {
+  position: absolute;
+  bottom: -7px;             /* distância da linha em relação à palavra */
+  left: 5%;
+  width: 25vh;/*aqui controlo o tamho da linha*/
+  background-color: var(--cor-topico-vermelho);
+  height: 4vh;             /* altura do SVG */
+  pointer-events: none;     /* não bloqueia clique */
+  z-index: -1;
+  border-radius: 20px;
+}
+
+.linha-vermelha path {
+  stroke-dasharray: 200;    /* comprimento do traço */
+  stroke-dashoffset: 0;     /* pode animar se quiser */
+}
+
+
+/* SEXTA PARTE DA TELA HOME */
+
+.container-linha{
+  width: 90vw;
+  margin: 0 auto; /*isso centraliza o container*/
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  display: flex;
+  justify-content: center;
+  gap: 2vh;
+}
+
+.imagem-pessoa{
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+
+.imagem-pessoa:hover{
+  transform: scale(1.1); /* dá o zoom */
+}
+
+.container-bloco-linha {
+  text-align: center;
+  width: 40vh;
+  position: relative; /* cria contexto pro ::after */
+}
+
+.categoria-linha {
+  position: relative;       /* necessário para o ::after */
+  display: inline-block;    /* linha ficará do tamanho da palavra */
+  text-decoration: none;    /* remove sublinhado padrão, se houver */
+  color: var(--verde);
+  font-weight: 400;
+  font-size: 30px;
+}
+
+.texto-linha {
+  position: relative;
+  display: inline-block;
+}
+
+.texto-linha::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background-color: var(--verde);
+  transition: width 0.7s ease;
+}
+
+/* Faz a linha aparecer no hover do bloco */
+.container-bloco-linha:hover .texto-linha::after {
+  width: 100%;
+}
+
+
+.nome-linha{
+  font-size:  20px;
+  padding: 1em;
+  color: var(--preto);
+}
+
+.imagem-wrapper {
+  overflow: hidden;  /* impede que a imagem “ultrapasse” o container */
+  width: 100%;
+  height: auto;      /* mantém proporção */
+}
+
+/* SÉTIMA PARTE DA TELA HOME */
+
+.inspire {
+  padding-top: 5em;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  text-align: center;
+  width: 750px;
+  margin: 0 auto;
+   
+}
+
+.inspire-conteudo {
+  font-size: 45px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: var(--vermelho);/*o font weight mexe um pouco com o lugar das palavras!!!*/
+    
+}
+
+.div-ancora-confira{
+  padding-top: 25px;
+  padding-bottom: 80px;
+}
+
+.ancora-confira {
+  margin: 0 auto;
+  background-color: var(--vermelho);
+  padding: 20px 40px;
+  color: var(--cor-fonte-branca);
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 5px;
+  text-decoration: none;
+  width: 90px;
+  text-align: center;
+}
+
+.ancora-confira:hover {
+  background-color: var(--cor-linha-header);
+}
+
+
+/* LINHA VERDE */
+
+.texto-destaque {
+  position: relative;
+  display: inline-block;
+}
+
+.linha-verde {
+  position: absolute;
+  bottom: -1vh; /* ajusta a distância da linha para o texto */
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+}
+
+.linha-verde path {
+  stroke-dasharray: 500;     /* comprimento total do traço */
+  stroke-dashoffset: 500;    /* começa "escondido" */
+  animation: draw 2s ease-in-out forwards; /* anima até desenhar tudo */
+}
+
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0; /* faz o traço aparecer */
+  }
+}
+
+/* ============================
+  MOBILE – até 480px (iPhone SE)
+=============================== */
+@media (max-width: 480px) {
+
+  body{
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .video-bg {
+    height: 100%;
+    left: 50%;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 1;
+  }
+
+  .home-text{
+    width: 90%;
+    align-items: flex-start;
+  }
+
+  .home-text h1{
+    font-size: 45px;
+  }
+  .home-text p{
+    padding-top: 15px;
+    font-size: 20px;
+    width: 90%;
+  }
+
+/* parte imagem brocolis */
+  .pai-segundo-terceiro-container{
+    display: flex;
+    flex-direction: column-reverse;
+    /* justify-content: center; centraliza verticalmente */
+    /* align-items: center;     centraliza horizontalmente */
+    padding: 0;              /* remove o padding que atrapalha */
+    width: 100%;             /* ocupa toda a tela */
+    gap: 50px;   /*distancia da imagem pro texto verde*/
+    text-align: center;
+  }
+
+  .terceiro-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .imagem-brocolis{
+    width: 100%;
+    max-width: 80%;
+  }
+
+  .segundo-container{
+    width: 100%;
+  }
+
+  .segundo-container h3{
+    width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
+    font-size: 25px;
+    text-align: left;
+    line-height: 0.8;
+  }
+
+  .segundo-container p{
+    width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
+    font-size: 15px;
+    text-align: left;
+    font-weight: 200;
+    line-height: 1.5;
+  }
+
+  .segundo-container a{
+    margin-left: 10%;
+  }
+
+  .quarto-container{
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .quarto-container h4{
+    padding-top: 20%;
+    font-family: Montserrat, Ubuntu;
+    align-items: center;
+    font-size: 28px;
+    font-weight: 300;
+  }
+
+  /* parte dos blocos */
+  .container-pai{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: space-around;
+  gap: 3vh;
+  padding-top: 10vh;
+  padding-bottom: 15vh;
+  align-items: center;
+  }
+
+  .bloco-branco, .bloco-verde, .bloco-vermelho{
+  width: 80vw;
+  padding: 6vw;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  
+  }
+
+  .bloco-branco h3, .bloco-verde h3, .bloco-vermelho h3{
+  width: 80%;
+  font-size: 1.3em;
+  line-height: 1.5;
+  }
+
+  .bloco-branco p, .bloco-verde p, .bloco-vermelho p{
+  width: 80%;
+  line-height: 1.5;
+  }
+
+  .img-legumes{
+  display: none;
+  }
+
+  .pai-imagem {
+    position: relative;
+    overflow: hidden;
+    height: 40vh;
+  }
+
+  .pai-imagem::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('../../assets/p_s1_img_mobile.png');
+    background-repeat: no-repeat;
+    background-size: 100%;  /* SEM ZOOM — mostra a imagem inteira */
+    z-index: 1;
+  }
+
+  /* aqui garante que o conteudo fique acima da imagem */
+  .pai-imagem > * {
+  position: relative;
+  z-index: 2;
+  }
+
+  .texto-legumes{
+    font-size: 25px;
+  }
+
+  /* ajuste da linha vermelha */
+  .destaque-vermelho {
+    display: inline-block;
+  }
+
+  .linha-vermelha {
+    left: 55% !important;        /* centraliza */
+    transform: translateX(-50%); /* centraliza */
+    width: 100% !important;       /* ocupa quase toda a largura da palavra */
+    max-width: 140px;            /* limite visual para não ficar exagerado */
+    height: 15px !important;     /* linha mais fina no mobile */
+    bottom: -1px !important;     /* aproxima da palavra */
+  } 
+
+  .container-linha{
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 2vh;
+  }
+
+  .inspire{
+    text-align: center;
+    width: 80%;
+  }
+
+  .inspire h3{
+    font-size: 35px;
+  }
+}
+
+/* tablets */
+
+
+/* tablets maiores */
+@media (max-width: 820px){
+  body{
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .video-bg {
+    height: 100%;
+    left: 50%;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 1;
+  }
+
+  .home-text{
+    width: 90%;
+    align-items: flex-start;
+  }
+
+  .home-text h1{
+    font-size: 45px;
+  }
+  .home-text p{
+    padding-top: 15px;
+    font-size: 20px;
+    width: 90%;
+  }
+
+/* parte imagem brocolis */
+  .pai-segundo-terceiro-container{
+    display: flex;
+    flex-direction: column-reverse;
+    /* justify-content: center; centraliza verticalmente */
+    /* align-items: center;     centraliza horizontalmente */
+    padding: 0;              /* remove o padding que atrapalha */
+    width: 100%;             /* ocupa toda a tela */
+    gap: 50px;   /*distancia da imagem pro texto verde*/
+    text-align: center;
+  }
+
+  .terceiro-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .imagem-brocolis{
+    width: 100%;
+    max-width: 80%;
+  }
+
+  .segundo-container{
+    width: 100%;
+  }
+
+  .segundo-container h3{
+    width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
+    font-size: 45px;
+    text-align: left;
+    line-height: 0.8;
+  }
+
+  .segundo-container p{
+    width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
+    font-size: 15px;
+    text-align: left;
+    font-weight: 200;
+    line-height: 1.5;
+  }
+
+  .segundo-container a{
+    margin-left: 10%;
+  }
+
+  .quarto-container{
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .quarto-container h4{
+    padding-top: 20%;
+    font-family: Montserrat, Ubuntu;
+    align-items: center;
+    font-size: 45px;
+    font-weight: 400;
+  }
+
+  /* parte dos blocos */
+  .container-pai{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: space-around;
+  gap: 3vh;
+  padding-top: 10vh;
+  padding-bottom: 15vh;
+  align-items: center;
+  }
+
+  .bloco-branco, .bloco-verde, .bloco-vermelho{
+  width: 80vw;
+  padding: 6vw;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .bloco-branco h3, .bloco-verde h3, .bloco-vermelho h3{
+  width: 80%;
+  font-size: 1.3em;
+  line-height: 1.5;
+  }
+
+  .bloco-branco p, .bloco-verde p, .bloco-vermelho p{
+  width: 80%;
+  line-height: 1.5;
+  }
+
+  .img-legumes{
+  display: none;
+  }
+
+  .pai-imagem {
+    position: relative;
+    overflow: hidden;
+    height: 40vh;
+  }
+
+  .pai-imagem::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('../../assets/p_s1_img_mobile.png');
+    background-repeat: no-repeat;
+    background-size: 100%;  /* SEM ZOOM — mostra a imagem inteira */
+    z-index: 1;
+  }
+
+  /* aqui garante que o conteudo fique acima da imagem */
+  .pai-imagem > * {
+  position: relative;
+  z-index: 2;
+  }
+
+  .texto-legumes{
+    font-size: 35px;
+  }
+
+  /* ajuste da linha vermelha */
+  .destaque-vermelho {
+    display: inline-block;
+  }
+
+  .linha-vermelha {
+    left: 55% !important;        /* centraliza */
+    transform: translateX(-50%); /* centraliza */
+    width: 100% !important;       /* ocupa quase toda a largura da palavra */
+    max-width: 140px;            /* limite visual para não ficar exagerado */
+    height: 15px !important;     /* linha mais fina no mobile */
+    bottom: -1px !important;     /* aproxima da palavra */
+  } 
+
+  .container-linha{
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 2vh;
+  }
+
+  .container-bloco-linha{
+    width: 30vh;
+  }
+
+  .inspire{
+    text-align: center;
+    width: 80%;
+  }
+
+  .inspire h3{
+    font-size: 38px;
+    font-weight: 400;
+  }
+}
+
+@media (max-width: 1024px) {
+
+  .home-text{
+    width: 90%;
+  }
+
+  .home-text h1{
+    font-size: 8vh;
+  }
+
+  .subtitulo-responsividade{
+    width: 100%;
+  }
+  .subtitulo-responsividade p{
+    font-size: 1.5rem;
+  }
+
+  /* parte imagem brocolis */
+  .pai-segundo-terceiro-container{
+    display: flex;
+    flex-direction: column-reverse;
+    /* justify-content: center; centraliza verticalmente */
+    /* align-items: center;     centraliza horizontalmente */
+    padding: 0;              /* remove o padding que atrapalha */
+    width: 100%;             /* ocupa toda a tela */
+    gap: 50px;   /*distancia da imagem pro texto verde*/
+    text-align: center;
+  }
+
+  .terceiro-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .imagem-brocolis{
+    width: 100%;
+    max-width: 80%;
+  }
+
+  .segundo-container{
+    width: 100%;
+  }
+
+  .segundo-container h3{
+    width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
+    font-size: 45px;
+    text-align: left;
+    line-height: 0.8;
+  }
+
+  .segundo-container p{
+    width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
+    font-size: 15px;
+    text-align: left;
+    font-weight: 200;
+    line-height: 1.5;
+  }
+
+  .segundo-container a{
+    margin-left: 10%;
+  }
+
+  .quarto-container{
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .quarto-container h4{
+    padding-top: 20%;
+    font-family: Montserrat, Ubuntu;
+    align-items: center;
+    font-size: 45px;
+    font-weight: 400;
+  }
+
+  .img-legumes{
+  display: none;
+  }
+
+  .pai-imagem {
+    position: relative;
+    overflow: hidden;
+    height: 40vh;
+  }
+
+  .pai-imagem::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('../../assets/p_s1_img_mobile.png');
+    background-repeat: no-repeat;
+    background-size: 100%;  /* SEM ZOOM — mostra a imagem inteira */
+    z-index: 1;
+  }
+
+  /* aqui garante que o conteudo fique acima da imagem */
+  .pai-imagem > * {
+  position: relative;
+  z-index: 2;
+  }
+
+  .texto-legumes{
+    font-size: 35px;
+  }
+
+  /* ajuste da linha vermelha */
+  .destaque-vermelho {
+    display: inline-block;
+  }
+
+  .linha-vermelha {
+    left: 55% !important;        /* centraliza */
+    transform: translateX(-50%); /* centraliza */
+    width: 100% !important;       /* ocupa quase toda a largura da palavra */
+    max-width: 140px;            /* limite visual para não ficar exagerado */
+    height: 15px !important;     /* linha mais fina no mobile */
+    bottom: -1px !important;     /* aproxima da palavra */
+  } 
+}
+
+@media (max-width: 540px) {
+  .home-text{
+    width: 90%;
+    align-items: flex-start;
+  }
+
+  .home-text h1{
+    font-size: 45px;
+  }
+  .home-text p{
+    padding-top: 15px;
+    font-size: 20px;
+    width: 90%;
+  }
+
+  .segundo-container h3{
+    width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
+    font-size: 25px;
+    text-align: left;
+    line-height: 0.8;
+  }
+
+  .segundo-container p{
+    font-size: 18px;
+  }
+  /* conheca os principais */
+  .quarto-container h4{
+    line-height: 1.5;
+  }
+
+  .texto-legumes{
+    font-size: 25px;
+  }
+
+  /* tamanho dos blocos */
+  .container-bloco-linha{
+    width: 45vh;
+  }
+
+  .quarto-container h4{
+    font-size: 8vw;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+/* Galaxy z Fold 5 */
+@media(max-width: 344px) {
+  .container-bloco-linha{
+    width: 35vh;
+  }
+
+  /* texto inspire */
+  .inspire{
+    text-align: center;
+  }
+
+  .inspire h3 {
+    font-size: 30px;
+  }
+}
+
+/* Azuz Zenbook Fold  */
+@media (max-width: 853px) {
+  .home-text{
+    width: 90%;
+    align-items: flex-start;
+  }
+
+  .home-text h1{
+    font-size: 85px;
+  }
+  .home-text p{
+    padding-top: 15px;
+    font-size: 25px;
+    width: 80%;
+  }
+
+  /* parte dos blocos coloridos */
+  .container-pai{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: space-around;
+  gap: 3vh;
+  padding-top: 10vh;
+  padding-bottom: 15vh;
+  align-items: center;
+  }
+
+  .bloco-branco, .bloco-verde, .bloco-vermelho{
+  width: 80vw;
+  padding: 6vw;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* sansung galaxy a51 */
+@media (max-width: 412px) {
+  .home-text{
+    width: 90%;
+    align-items: flex-start;
+  }
+
+  .home-text h1{
+    font-size: 45px;
+  }
+  .home-text p{
+    padding-top: 15px;
+    font-size: 18px;
+    width: 80%;
+  } 
+
+  /* conheca os principais */
+  .quarto-container h4{
+    font-size: 30px;
+  }
+
+  /* tamanho bloco com imagem */
+  .container-bloco-linha{
+    width: 35vh;
+  }
+
+  /* texto inspire */
+  .inspire{
+    text-align: center;
+  }
+
+  .inspire h3 {
+    font-size: 32px;
+  }
+}
+
+/* nest hub max */
+@media (max-width: 1280px) {
+
+  .texto-legumes{
+    width: 100%;
+  }
+  .texto-legumes{
+    font-size: 39px;
+  }
+
+  .linha-vermelha {
+    left: 55% !important;        /* centraliza */
+    transform: translateX(-50%); /* centraliza */
+    width: 100% !important;       /* ocupa quase toda a largura da palavra */
+    max-width: 140px;            /* limite visual para não ficar exagerado */
+    height: 25px !important;     /* linha mais fina no mobile */
+    bottom: -1px !important;     /* aproxima da palavra */
+  } 
+}
+
+/* iphone xr */
+@media (max-width: 414px) {
+  .home-text{
+    width: 90%;
+    align-items: flex-start;
+  }
+
+  .home-text h1{
+    font-size: 45px;
+  }
+  .home-text p{
+    padding-top: 15px;
+    font-size: 20px;
+    width: 90%;
+  } 
+}
+
+/* iphone 14 pro max  */
+@media (max-width: 430px) {
+  .home-text{
+    width: 90%;
+    align-items: flex-start;
+  }
+
+  .home-text h1{
+    font-size: 45px;
+  }
+  .home-text p{
+    padding-top: 15px;
+    font-size: 20px;
+    width: 90%;
+  } 
+}
+
+/* surface duo */
+@media (max-width: 540px) {
+  .home-text{
+    width: 90%;
+    align-items: flex-start;
+  }
+
+  .home-text h1{
+    font-size: 30px;
+  }
+  .home-text p{
+    padding-top: 15px;
+    font-size: 20px;
+    width: 90%;
+  } 
+}
+
+/* para tela com 600px */
+@media (min-width: 600px) and (max-width:855px){
+  .home-text{
+    width: 90%;
+    align-items: flex-start;
+  }
+
+  .home-text h1{
+    font-size: 45px;
+  }
+  .home-text p{
+    padding-top: 15px;
+    font-size: 20px;
+    width: 90%;
+  } 
+}
+
+@media (min-width: 541px) and (max-width:599px){
+  .home-text{
+    width: 90%;
+    align-items: flex-start;
+  }
+
+  .home-text h1{
+    font-size: 45px;
+  }
+  .home-text p{
+    padding-top: 15px;
+    font-size: 20px;
+    width: 90%;
+  } 
+}
+
+
+@media (max-width: 280px) {
+  .home-text h1{
+    font-size: 15px;
+  }
+}
+
+
+

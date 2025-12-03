@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+
+.container-img{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.img-legumes {
+    width: 110%;
+    height: 40rem;
+}
+
+.container-textos-1secao{
+    position: absolute; /* sobrepõe a imagem */
+    top: 30%;           /* centraliza verticalmente (ajuste conforme precisar) */
+    left: 50%;          /* centraliza horizontalmente */
+    transform: translate(-50%, -0%); /* centraliza exatamente no meio */
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    text-align:left;
+    padding-left: 15%;
+    width: 100%;        /* ajuste a largura como precisar */
+    color: var(--branco);     
+}
+
+.titulo{
+    font-size: 8vh;
+    font-weight: 500;
+}
+
+.subtitulo{
+    font-size: 3vh;
+
+}
+
+/* aqui fica a estilização seta branca */
+
+.certificacoes_svg_seta__branca {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--vermelho);
+    width: 3rem;
+    border-radius: 45px;
+    padding: 0.5rem;
+    height: 3rem;
+}
+
+/* SEGUNDA PARTE TELA CERTIFICAÇÕES */
+
+.container-elementos-2-parte{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 10rem 5rem 10rem;
+}
+
+.tamanho-elemento-textos-3{
+    width: 50%;
+}
+
+.tamanho-elemento-imagem-2{
+    width: 50%;
+}
+
+.imagem-segurança{
+    width: 90%;
+    padding: 0 0 0 5rem;
+}
+
+.textos-3{
+    font-size: 2.5vh;
+    font-weight: 200;
+    color: var(--cinza-escuro);
+    line-height: 2rem;
+}
+
+.direcionamento-textos-grande-3{
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+@media (max-width: 1100px) {
+   .container-elementos-2-parte{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+   }
+
+    .imagem-segurança{
+        width: 90%;
+        padding: 0 0 0 0;
+    }
+
+    .tamanho-elemento-textos-3{
+        width: 100%;
+    }
+
+    .tamanho-elemento-imagem-2{
+        width: 80%;
+        margin-left: 2%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .subtitulo{
+        width: 90%;
+    }
+
+    .textos-3{
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 1000px){
+
+    .titulo{
+        font-size: 50px;
+    }
+    .subtitulo{
+        width: 90%;
+    }
+
+    .container-elementos-2-parte{
+        width: 90%;
+        margin: 0 auto;
+        padding: 0;
+        margin-left: 10%;
+    }
+
+    .textos-3{
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .titulo{
+        font-size: 67px;
+    }
+
+    .textos-3{
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 820px) {
+    .titulo{
+        font-size: 67px;
+    }
+
+    .textos-3{
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 412px) {
+
+    .titulo{
+        font-size: 60px;
+    }
+
+    .subtitulo{
+        font-size: 25px;
+    }
+}

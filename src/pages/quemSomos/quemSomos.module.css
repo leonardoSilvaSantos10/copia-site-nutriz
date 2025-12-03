@@ -1,0 +1,701 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+.titulo {
+    background-color: var(--preto);
+}
+
+.primeira-secao-quem-somos{
+    width: 100%;
+    font-family: Ubuntu, sans-serif;   
+}
+
+.primeira-imagem-quem-somos{
+    width: 100%;
+    height: 80vh;
+}
+
+/* segunda parte tela quem somos */
+
+.segunda-secao-quem-somos{
+    padding-bottom: 100px;
+}
+
+.primeiro-container{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 60px;
+}
+
+.pai-imagem-quem-somos{
+    width: 40%;
+}
+
+.imagem-quem-somos{
+    width: 100%;
+    /*height: auto;/*aqui eu alterei o tamanho das imagens com o vw pra testar*/
+}
+
+.texto-escolha-consciente {
+    color: var(--verde);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 45%;
+}
+
+.texto-maior{
+    font-size: 5vh;
+    font-weight: 100;
+}
+
+.escolha-span{
+    font-weight: 500;
+}
+
+.texto-menor{
+    color: var(--preto);
+    font-size: 3vh;
+    font-weight: 100;
+}
+
+/* TERCEIRA PARTE TELA QUEM SOMOS */
+
+.terceira-secao-quem-somos{
+    width: 100%;
+    background-color: var(--cor-footer-fundo);
+    height: 65vw;
+}
+
+.segundo-container{
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 10px;
+    color: var(--cor-fonte-branca);
+}
+
+.imagem-brocolis-prato{
+    width: 100%;
+    height: auto;
+}
+
+.teste{
+    padding: 5vh;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 60%;
+}
+
+.texto-menor-branco{
+    font-size: 3vh;
+    font-weight: 100;
+}
+
+/* QUARTA PARTE TELA QUEM SOMOS */
+
+.controle-imagem-valores{
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+}
+
+.imagem-valores{
+    width: 100%;
+}
+
+.texto-politica{
+    text-align: center;
+    font-size: 6vh;
+    color: var(--verde);
+}
+
+.texto-quarta-parte{
+    padding: 50px;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+    font-size: 3vh;
+    font-weight: 200;
+    line-height: 4vh;
+}
+
+.texto-container{
+    width: 60px;
+}
+
+/* QUINTA PARTE TELA QUEM SOMOS */
+
+.container-pai-imagem-verde {
+    padding-top: 50vw;
+    position: relative; /* necessário para que os filhos absolutos se posicionem em relação a este container */
+    width: 100%;
+}
+
+.container-imagem-verde {
+    width: 100%;
+}
+
+.imagem-verde {
+    width: 100%;
+    display: block;
+}
+
+.pai-textos-verde {
+    padding-top: 50vw;
+    position: absolute; /* sobrepõe a imagem */
+    top: 50%;           /* centraliza verticalmente (ajuste conforme precisar) */
+    left: 50%;          /* centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* centraliza exatamente no meio */
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    text-align: center;
+    width: 100%;        /* ajuste a largura como precisar */
+    color: var(--branco);      /* importante se a imagem for escura, para o texto aparecer */
+}
+
+.texto-maior-verde{
+    width: 50%;
+    margin: 0 auto;
+    font-size: 6vh;
+    font-weight: 900;
+}
+
+.texto-menor-verde{
+    width: 80%;
+    margin: 0 auto;
+    font-size: 3vh;
+    font-weight: 100;
+}
+
+/* começando a responsividade do zero */
+
+@media (min-width: 1415px) {
+    .texto-politica{
+        transform: translateY(-70px); /* pra baixo */
+        font-size: 45px;
+        margin-bottom: 5%;
+    }
+
+    .texto-quarta-parte{
+        transform: translateY(-180px);
+        font-size: 18px;
+        text-align: left;
+        
+        padding: 50px;
+    }
+}
+
+@media(max-width: 1415px) {
+    .img-frescor{
+        height: 500px;
+    }
+
+    .primeiro-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    /* TEXTO ESCOLHA CONSCIENTE */
+    .texto-escolha-consciente{
+        width: 100%;
+    }
+
+    /* CONTROLE DO TAMANHO DO TEXTO ESCOLHA CONSCINETE */
+    .texto-maior{
+        font-size: 30px;  
+    }
+
+    .texto-menor{
+        text-align: justify;
+        font-size: 25px;
+        line-height: 1.5;
+    }
+
+    .pai-imagem-quem-somos{
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .img-semente{
+        width: 50%;
+        height: auto;
+        margin-top: 15%;
+        transform: none !important; /*essa linha aqui faz tirar o efeito de se mexer da imagem  */
+    }
+
+    /* texto trajetoria */
+
+    .teste{
+        gap: 30px;
+    }
+    .texto-trajetoria{
+        width: 100%;
+        margin-left: 5%;
+        font-size: 35px;
+        line-height: 1.5;
+    }
+
+    .texto-menor-branco{
+        width: 90%;
+        margin: 0 auto;
+        text-align: justify;
+        font-size: 25px;
+        transform: translateY(80px); /*  pra baixo */
+    }
+
+    /* removendo a imagem do brocolis */
+    .tamanho-elemento-img-broc{
+        display: none;
+    }
+
+    /* parte verde tela quem somos */
+    .terceira-secao-quem-somos{
+        height: 100%; 
+        background: linear-gradient(to bottom, #00823d 50%, white 50%);
+        transform: translateY(-1rem); /* 20px pra cima */
+    }
+
+
+    .controle-imagem-valores{
+        width: 100%;
+        text-align: center;
+        transform: translateY(35px); /* 20px pra baixo */
+    }
+
+    .imagem-valores{
+        width: 90%;
+    }
+
+    .segundo-container{
+        width: 100%;
+    }
+
+    .teste{
+        width: 100%;
+    }
+
+    /* parte do texto politica integrada */
+
+    .texto-politica{
+        transform: translateY(60px); /* pra baixo */
+        font-size: 45px;
+        margin-bottom: 3%;
+    }
+
+    .texto-quarta-parte{
+        transform: translateY(40px);
+        font-size: 20px;
+        text-align: left;
+        background-color: white;
+        padding: 70px;
+    }
+
+    /* parte da imagem verde */
+
+    .container-pai-imagem-verde{
+        height: 180px;
+        background-color: #0A4635;
+    }
+
+    .imagem-verde{
+        height: 55vh;
+        transform: translateY(-100%); /* corta uma parte de cima */
+    }
+
+    .pai-textos-verde{
+        text-align: center;
+        top: 20%; /*fiz os textos birem com esse top  */
+    }
+
+    .texto-maior-verde{
+        width: 80%;
+        font-size: 45px;
+    }
+
+    .texto-menor-verde{
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 690px) {
+    .img-frescor{
+    height: 60vh;
+    }
+
+    .img-frescor{
+        height: 500px;
+    }
+
+    .primeiro-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    /* TEXTO ESCOLHA CONSCIENTE */
+    .texto-escolha-consciente{
+        width: 100%;
+    }
+
+    /* CONTROLE DO TAMANHO DO TEXTO ESCOLHA CONSCINETE */
+    .texto-maior{
+        font-size: 30px;  
+    }
+
+    .texto-menor{
+        text-align: justify;
+        font-size: 20px;
+        line-height: 1.5;
+    }
+
+    .pai-imagem-quem-somos{
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .img-semente{
+        width: 50%;
+        height: auto;
+        margin-top: 15%;
+        transform: none !important; /*essa linha aqui faz tirar o efeito de se mexer da imagem  */
+    }
+
+    /* texto trajetoria */
+
+    .teste{
+        gap: 30px;
+    }
+    .texto-trajetoria{
+        width: 100%;
+        margin-left: 5%;
+        font-size: 35px;
+        line-height: 1.5;
+    }
+
+    .texto-menor-branco{
+        width: 90%;
+        margin: 0 auto;
+        text-align: justify;
+        font-size: 25px;
+        transform: translateY(80px); /*  pra baixo */
+    }
+
+    /* removendo a imagem do brocolis */
+    .tamanho-elemento-img-broc{
+        display: none;
+    }
+
+    /* parte verde tela quem somos */
+    .terceira-secao-quem-somos{
+        height: 100%; 
+        background: linear-gradient(to bottom, #00823d 50%, white 50%);
+        transform: translateY(-1rem); /* 20px pra cima */
+    }
+
+
+    .controle-imagem-valores{
+        width: 100%;
+        text-align: center;
+        transform: translateY(35px); /* 20px pra baixo */
+    }
+
+    .imagem-valores{
+        width: 90%;
+    }
+
+    .segundo-container{
+        width: 100%;
+    }
+
+    .teste{
+        width: 100%;
+    }
+
+    /* parte do texto politica integrada */
+
+    .texto-politica{
+        transform: translateY(60px); /* pra baixo */
+        font-size: 45px;
+        margin-bottom: 3%;
+    }
+
+    .texto-quarta-parte{
+        transform: translateY(40px);
+        font-size: 15px;
+        text-align: left;
+        background-color: white;
+        padding: 70px;
+        margin-bottom: 100px;
+    }
+
+    /* parte da imagem verde */
+
+    .container-pai-imagem-verde{
+        height: 180px;
+        background-color: #0A4635;
+    }
+
+    .imagem-verde{
+        height: 55vh;
+        transform: translateY(-100%); /* corta uma parte de cima */
+    }
+
+    .pai-textos-verde{
+        text-align: center;
+        top: 20%; /*fiz os textos birem com esse top  */
+    }
+
+    .texto-maior-verde{
+        width: 80%;
+        font-size: 40px;
+    }
+
+    .texto-menor-verde{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .texto-quarta-parte{
+        margin-bottom: 150px;
+    }
+}
+
+@media (max-width: 400px) {
+    .img-frescor{
+    height: 60vh;
+    }
+
+    .img-frescor{
+        height: 500px;
+    }
+
+    .primeiro-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    /* TEXTO ESCOLHA CONSCIENTE */
+    .texto-escolha-consciente{
+        width: 100%;
+    }
+
+    /* CONTROLE DO TAMANHO DO TEXTO ESCOLHA CONSCINETE */
+    .texto-maior{
+        font-size: 30px;  
+    }
+
+    .texto-menor{
+        text-align: justify;
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .pai-imagem-quem-somos{
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .img-semente{
+        width: 50%;
+        height: auto;
+        margin-top: 15%;
+        transform: none !important; /*essa linha aqui faz tirar o efeito de se mexer da imagem  */
+    }
+
+    /* texto trajetoria */
+
+    .teste{
+        gap: 30px;
+    }
+    .texto-trajetoria{
+        width: 100%;
+        margin-left: 5%;
+        font-size: 35px;
+        line-height: 1.5;
+    }
+
+    .texto-menor-branco{
+        width: 90%;
+        margin: 0 auto;
+        text-align: justify;
+        font-size: 20px;
+        transform: translateY(80px); /*  pra baixo */
+    }
+
+    /* removendo a imagem do brocolis */
+    .tamanho-elemento-img-broc{
+        display: none;
+    }
+
+    /* parte verde tela quem somos */
+    .terceira-secao-quem-somos{
+        height: 100%; 
+        background: linear-gradient(to bottom, #00823d 50%, white 50%);
+        transform: translateY(-1rem); /* 20px pra cima */
+    }
+
+
+    .controle-imagem-valores{
+        width: 100%;
+        text-align: center;
+        transform: translateY(35px); /* 20px pra baixo */
+    }
+
+    .imagem-valores{
+        width: 90%;
+    }
+
+    .segundo-container{
+        width: 100%;
+    }
+
+    .teste{
+        width: 100%;
+    }
+
+    /* parte do texto politica integrada */
+
+    .texto-politica{
+        transform: translateY(60px); /* pra baixo */
+        font-size: 45px;
+        margin-bottom: 5%;
+    }
+
+    .texto-quarta-parte{
+        transform: translateY(40px);
+        font-size: 20px;
+        text-align: left;
+        background-color: white;
+        padding: 50px;
+        margin-bottom: 50px;
+    }
+
+    /* parte da imagem verde */
+
+    .container-pai-imagem-verde{
+        height: 180px;
+        background-color: #0A4635;
+    }
+
+    .imagem-verde{
+        height: 55vh;
+        transform: translateY(-100%); /* corta uma parte de cima */
+    }
+
+    .pai-textos-verde{
+        text-align: center;
+        top: 20%; /*fiz os textos birem com esse top  */
+    }
+
+    .texto-maior-verde{
+        width: 80%;
+        font-size: 30px;
+    }
+
+    .texto-menor-verde{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 399px) {
+    .texto-quarta-parte{
+        transform: translateY(40px);
+        font-size: 15px;
+        text-align: left;
+        background-color: white;
+        padding: 60px;
+        margin-bottom: 230px;
+        line-height: 1.2;
+    }
+}
+
+
+/* AJUSTES FINAIS QUE FICARAM FALTANDO */
+
+@media (max-width: 414px) {
+    .texto-quarta-parte{
+        margin-bottom: 230px;
+    }
+
+    .texto-maior-verde{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 430px) {
+    .texto-quarta-parte{
+        margin-bottom: 230px;
+    }
+
+    .texto-maior-verde{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .texto-quarta-parte{
+        font-size: 15px;
+        line-height: 1.5;
+        margin-bottom: 140px;
+    }
+}
+
+@media (max-width: 820px) {
+    .texto-quarta-parte{
+        font-size: 20px;
+        line-height: 1.5;
+        margin-bottom: 160px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .texto-quarta-parte{
+        font-size: 20px;
+        line-height: 1.5;
+        margin-bottom: 160px;
+    }
+}
+
+@media (max-width: 912px) {
+    .texto-quarta-parte{
+        font-size: 20px;
+        line-height: 1.5;
+        margin-bottom: 190px;
+    }
+
+    .pai-textos-verde{
+        text-align: center;
+        top: 5%; /*fiz os textos birem com esse top  */
+    }
+}
+
+@media (max-width: 344px) {
+    .texto-quarta-parte{
+        font-size: 15px;
+        margin-bottom: 230px;
+    }
+}
+
+@media (max-width: 412px) {
+    .texto-quarta-parte{
+        margin-bottom: 200px;
+    }
+}
+
+
+
+
+

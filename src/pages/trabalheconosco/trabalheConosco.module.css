@@ -1,0 +1,140 @@
+.imagem-container {
+    position: relative; /* contêiner relativo para o absolute funcionar */
+}
+
+.primeira-img{
+    display: block;
+    width: 100%;
+    height: 30rem;
+    padding-bottom: 5%;
+}
+
+.texto-sobre-imagem {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    position: absolute;
+    top: 10rem;    /* distância do topo do container */
+    left: 10rem;   /* distância da esquerda do container */
+    color: var(--branco); /* texto sobreposto */
+    z-index: 2;
+}
+
+.elem-titulo{
+    font-size: 9vh;
+    font-weight: 500;
+}
+
+.elem-subtitulo{
+    font-size: 3.5vh;
+    font-weight: 400;
+    width: 55%;
+}
+
+/* PARTE DOS INPUTS */
+
+.secao-input-centralizada{
+    padding: 10vh 0 5vh 0;
+    display: flex;               /* ativa o flexbox */
+    justify-content: center;     /* centraliza horizontalmente */
+    align-items: center;         /* centraliza verticalmente */   
+}
+
+.controle-posicao-inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--cor-fonte-branca);
+    border-radius: 10px;
+    padding: 50px;
+}
+
+.container-inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container-inputs label{
+    color: var(--cinza-escuro);
+    font-weight: 200;
+}
+
+.input-estilizado{
+    width: 35vw;
+    border: none;
+    border-bottom: 1px solid var(--verde);
+    outline: none;
+    background: transparent;
+}
+
+.input-estilizado:hover{
+    border-color: var(--cor-linha-header);
+}
+
+.input-estilizado:focus{
+    border-color: var(--cor-linha-header);
+}
+
+.ultimo-input{
+    width: 35vw;
+    font-size: 17px;
+    padding: 15px;
+}
+
+.ultimo-input input{
+    margin-right: 5px;
+}
+
+.ultimo-input label{
+    color: var(--cinza-escuro);
+    font-weight: 200;
+}
+
+.ultimo-input a {
+    color: var(--verde);
+    text-decoration: none;
+}
+
+.botao-enviar{
+    width: 10rem;
+    background-color: var(--verde);
+    border-radius: 5px;
+    color: var(--cor-fonte-branca);
+    font-size: 20px;
+    font-weight: 500;
+    padding: 18px 40px;
+    transition: .2s;
+    border: none;
+}
+
+@media (max-width: 1130px){
+
+.texto-sobre-imagem{
+    width: 90%;
+    left: 30px;
+}
+.elem-titulo{
+    font-size: 28px;
+    font-weight: 500;
+    left: 0;
+    top: 0;
+}
+
+.elem-subtitulo{
+    font-size: 20px;
+    font-weight: 400;
+    width: 90%;
+}
+
+.primeira-img{
+    width: 130%;
+    
+    
+}
+}
+
+
+
+

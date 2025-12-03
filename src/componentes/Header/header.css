@@ -1,0 +1,456 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* CSS global para evitar scroll horizontal */
+html, body {
+  overflow-x: hidden; /* bloqueia scroll horizontal */
+  width: 100%;
+}
+
+.cabecalho {
+  position: fixed;
+  z-index: 1000;     /* garante que fique sobre o conteúdo */
+  background-color: var(--branco);
+  height: 75px;
+  font-family: Ubuntu, sans-serif;
+  width: 100%;
+}
+
+.pai{ 
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 2px;
+}
+
+/* Logo */
+.logo_nutriz {
+  width: 100px;
+  padding: 5px;
+  height: auto;
+}
+
+.botao_tela {
+  position: relative; /* necessário para o ::after */  
+  text-decoration: none;
+  color: var(--verde);
+  cursor: pointer;
+  font-weight: 400;
+  padding: 5px 0;
+  display: inline-flex;   /* ou inline-block */
+  flex: 0 0 auto;         /* impede que o link se estique no flex */
+  position: relative;
+}
+
+.botao_tela::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 1px; /* distância da linha */
+  width: 0;
+  height: 1px;
+  background-color: var(--vermelho);
+  transition: width 0.3s ease;
+}
+
+.botao_tela:hover::after,
+.botao_tela.active::after {
+  width: 100%;
+}
+
+.grupo-botoes {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.grupo-icones {
+  display: flex;
+  gap: 15px;
+}
+
+.grupo-icones a {
+  position: relative;
+  display: inline-block; /* importante para o ::after aparecer */
+}
+
+.grupo-icones a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;        /* altura da linha */
+  background-color: var(--vermelho);
+  transition: width 0.3s ease;
+}
+
+.grupo-icones a:hover::after {
+  width: 100%;
+}
+
+.grupo-icones a.active::after {
+  width: 100%;
+}
+
+/* Ícones tamanho */
+.icones {
+  width: 24px;
+  display: block;
+  padding: 2px;
+}
+
+.botao_contato {
+  background-color: var(--vermelho);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.botao_contato:hover{
+  transform: scale(1.1); /* aumenta 10% quando passa o mouse */
+  transition: transform 0.3s ease; /* animação suave */
+}
+
+.botao_contato::after {
+  display: none; /* se não quiser a linha vermelha */
+}
+
+.idioma-link {
+  border: none;        /* remove a borda padrão */
+  background: none;    /* remove o fundo padrão */
+  padding: 0;          /* remove padding extra */
+  cursor: pointer;     /* mantém o cursor de clique */
+  position: relative;  /* necessário para o ::after */
+  display: inline-block;
+}
+
+.icones-linguagem:hover {
+  transform: scale(1.1); /* aumenta 10% quando passa o mouse */
+  transition: transform 0.3s ease; /* animação suave */
+}
+
+.idioma-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;        /* altura da linha */
+  background-color: var(--vermelho);
+  transition: width 0.3s ease;
+}
+
+.idioma-link:hover::after,
+.idioma-link.active::after {
+  width: 100%;        /* expande a linha ao passar o mouse ou quando ativo */
+}
+
+/* aqui eu começo a responsiviade - teste */
+
+/* botão de menu (esconde no desktop) */
+.btn-menu {
+  display: none; 
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-menu img {
+  width: 28px;
+}
+
+/* ============================
+   MOBILE – até 480px (iPhone SE)
+=============================== */
+@media (max-width: 480px) {
+
+  .cabecalho{
+    width: 100%;
+    height: auto;
+  }
+
+  /* esconder o menu normal */
+  .grupo-botoes,
+  .grupo-icones {
+    display: none;
+  }
+
+  /* mostrar o botão hambúrguer */
+  .btn-menu {
+    display: block;
+    position: absolute;
+    top: 18px;
+    right: 15px;
+    z-index: 2000;
+  }
+
+  /* ajustar a logo no mobile */
+  .logo_nutriz {
+    width: 22% !important;
+  }
+
+  /* MENU LATERAL MOBILE */
+
+  .menu-mobile {
+    position: fixed;
+    top: 70px;
+    right: 0;
+    width: 185px;
+    height: 80vh;
+    background: #fff;
+    z-index: 999;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-top: 1px solid #e6e6e6;
+  }
+
+  .menu-mobile.aberto {
+    transform: translateX(0);
+  }
+
+  /* LINKS DO MENU MOBILE */
+  .menu-mobile-links a {
+    font-family: Ubuntu, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--verde);
+    padding-bottom: 5px;
+    text-decoration: none;
+
+    position: relative;
+    width: fit-content;
+    display: inline-block;
+  }
+
+  /* estado inicial: sem linha */
+  .menu-mobile-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* distancia da linha */
+    width: 0;
+    height: 2px;
+    background-color: var(--vermelho);
+    transition: width 0.25s ease;
+  }
+
+  /* quando o NavLink está ativo */
+  .menu-mobile-links a.active::after {
+    width: 100%;
+  }
+
+  .menu-mobile-links a:last-child {
+    border-bottom: none;
+  }
+
+  .menu-mobile-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 1px;
+  }
+
+  .controle-duas-div-icones{
+    display: flex;
+    gap: 1px;
+  }
+
+  .menu-mobile-icones{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+  }
+
+  .menu-mobile-icones img {
+    width: 20px;
+  }
+
+  .menu-mobile-idiomas{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+  }
+
+  .menu-mobile-idiomas img{
+    width: 20px;
+  }
+
+  /* BOTÃO FECHAR */
+  .btn-fechar {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    position: absolute;
+    top: 18px;
+    right: 15px;
+    color: var(--verde);
+    z-index: 2000;
+  }
+
+}
+
+
+/* 
+   TABLET – até 1024px 
+*/
+@media(max-width: 1070px) {
+
+  .cabecalho{
+    width: 100%;
+    height: 70px;
+  }
+
+  /* esconder o menu normal */
+  .grupo-botoes,
+  .grupo-icones {
+    display: none;
+  }
+
+  /* mostrar o botão hambúrguer */
+  .btn-menu {
+    display: block;
+    position: absolute;
+    top: 18px;
+    right: 15px;
+    z-index: 2000;
+  }
+
+  /* ajustar a logo no mobile */
+  .logo_nutriz {
+    width: 10%;
+    padding-top:  10px;
+  }
+
+  /* MENU LATERAL MOBILE */
+
+  .menu-mobile {
+    position: fixed;
+    top: 70px;
+    right: 0;
+    width: 185px;
+    height: 80vh;
+    background: #fff;
+    z-index: 999;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-top: 1px solid #e6e6e6;
+  }
+
+  .menu-mobile.aberto {
+    transform: translateX(0);
+  }
+
+  /* LINKS DO MENU MOBILE */
+  .menu-mobile-links a {
+    font-family: Ubuntu, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--verde);
+    padding-bottom: 5px;
+    text-decoration: none;
+
+    position: relative;
+    width: fit-content;
+    display: inline-block;
+  }
+
+  /* estado inicial: sem linha */
+  .menu-mobile-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* distancia da linha */
+    width: 0;
+    height: 2px;
+    background-color: var(--vermelho);
+    transition: width 0.25s ease;
+  }
+
+  /* quando o NavLink está ativo */
+  .menu-mobile-links a.active::after {
+    width: 100%;
+  }
+
+  .menu-mobile-links a:last-child {
+    border-bottom: none;
+  }
+
+  .menu-mobile-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 1px;
+  }
+
+  .controle-duas-div-icones{
+    display: flex;
+    gap: 1px;
+  }
+
+  .menu-mobile-icones{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+  }
+
+  .menu-mobile-icones img {
+    width: 20px;
+  }
+
+  .menu-mobile-idiomas{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+  }
+
+  .menu-mobile-idiomas img{
+    width: 20px;
+  }
+
+  /* BOTÃO FECHAR */
+  .btn-fechar {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    position: absolute;
+    top: 18px;
+    right: 15px;
+    color: var(--verde);
+    z-index: 2000;
+  }
+
+}
+
+/* telas maiores */
+@media(min-width: 1024px) and (max-width: 1025px) {
+  .grupo-botoes{
+  display: flex;
+  gap: 13px;
+  align-items: center;
+  
+  font-size: 13px;
+  }
+}
+
+
+
+
+
+
+
+
+

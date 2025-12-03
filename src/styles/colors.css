@@ -1,0 +1,21 @@
+/* cores usadas no site nutriz  */
+
+:root {
+    --cor-linha-header: #eb2f29;
+    --vermelho: #df231d;
+    --cor-topico-vermelho: #df0022;
+
+    --cor-fundo-site: #faf6f0;
+    --branco: #ffffff;
+    --cor-fonte-branca: #fff;
+    --cor-topico-branco:#E2E8F0;
+    
+
+    --cor-footer-fundo: #00823d;
+    --verde: #007943;
+
+    --cinza-escuro: #3d3d3d;
+    --cinza: #6e6e6e;
+
+    --preto: #000000;
+}

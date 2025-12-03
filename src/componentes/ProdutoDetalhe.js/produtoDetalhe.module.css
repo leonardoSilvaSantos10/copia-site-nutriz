@@ -1,0 +1,84 @@
+.container-img-texto{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    padding: 10%;
+}
+
+.produto-textos{
+
+    position: relative; /*essa linha esta definindo o tamanho do meu elemento solido*/
+    width: 50%; /*mechi aqui pra mudar o tamanho do elemento pai dos textos*/   
+
+    color: var(--cinza-escuro);
+    display: flex;
+    flex-direction: column;
+    font-weight: 200;
+    justify-content: space-evenly;
+    margin: 0 10%;
+    line-height: 1.6;
+}
+
+.tamanho-textos{
+    width: 100%;
+}
+
+.div-img-produ{
+    position: relative; /*essa linha esta definindo o tamanho do meu elemento solido*/
+    width: 25%;
+}
+
+.produto-imagem{
+    width: 100%;
+}
+
+.composicao{
+    padding-left: 5%;
+}
+
+.titulo{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+
+.produto_zoom {
+  background-repeat: no-repeat;
+  background-size: 280%;
+  border: 2px solid var(--verde);
+  border-radius: 50%;
+  display: none;
+  height: 180px;
+  pointer-events: none;
+  position: absolute;
+  width: 180px;
+  z-index: 5;
+  transform: translate(-5%, -5%);
+}
+
+.show {
+  display: block;
+}
+
+@media (max-width: 950px) {
+    .container-img-texto{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+       padding: 0;
+        padding-top: 80px;
+        padding-bottom: 20px;
+    }
+
+    .div-img-produ{
+        width: 40%;
+    }
+
+    .produto-textos{
+        width: 80%;
+    }
+
+
+}
+
+
